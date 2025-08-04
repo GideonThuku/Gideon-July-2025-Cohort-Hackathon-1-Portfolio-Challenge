@@ -1,3 +1,9 @@
+## 🔎 Gideon's Live Website
+
+👉 [My Netflify website profile](https://gideonthukuprofile.netlify.app/) 
+
+---
+
 # 💼🌐 My Portfolio Website – Gideon Thuku
 I am Gideon Thuku. This is my personal portfolio website created for the **PLP Academy July 2025 Hackathon Challenge**. 
 
