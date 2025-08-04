@@ -92,5 +92,12 @@ my-portfolio/
 
 Thanks for checking out my project.This is just the beginning, I am still learning and growing as a developer.
 
+---
+
+## Contributing
+
+This is a personal portfolio, but I amm open to suggestions, ideas, or contributions from fellow learners, instructors at PowerLearn Project and other developers. 
+
+
 
 
