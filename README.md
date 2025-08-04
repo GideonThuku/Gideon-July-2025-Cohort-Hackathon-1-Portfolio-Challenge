@@ -21,6 +21,16 @@ This is my first big web project, and I am happy for this little progress
 
 ---
 
+## Beginner Note
+I’m still learning, and this project was built using only HTML and CSS as part of a beginner challenge.
+
+One thing I couldn’t do yet:
+👉 The mobile dropdown menu doesn’t close automatically when a link is clicked. Normally, this needs JavaScript, but I haven’t learned that part yet and it wasn’t allowed in this challenge.
+
+I hope to improve this in the future as I learn more!
+
+---
+
 ## 📋 My portfolio content
 
 - About Me section with what I do and my passions
@@ -43,4 +53,31 @@ This is my first big web project, and I am happy for this little progress
 
 ---
 
+## ✨ Special Features
+
+- Full background slideshow using my favorite images
+- Hover effects for images and buttons
+- Responsive layout (works on both mobile and desktop)
+- Easy to update and keep learning from!
+
+---
+
+## 📂 Folder Structure
+
+my-portfolio/
+├── index.html
+├── style.css
+├── README.md
+└── assets/
+├── images/
+│ ├── thuku2.jpg
+│ ├── art1.jpg
+│ ├── art3.jpg
+│ ├── art6.jpg
+│ └── plp.jpg
+└── docs/
+└── GideonThukuCV.pdf
+
+
+---
 
