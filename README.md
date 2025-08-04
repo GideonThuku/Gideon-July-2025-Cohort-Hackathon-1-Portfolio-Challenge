@@ -21,4 +21,26 @@ This is my first big web project, and I am happy for this little progress
 
 ---
 
+## 📋 My portfolio content
+
+- About Me section with what I do and my passions
+- Skills section with progress bars
+- One simple Python project (Calculator)
+- Education history
+- Interests and what inspires me
+- Contact section with my email, LinkedIn, and a form
+- Download button for my CV
+
+---
+
+## ⚒️ Tools I Used in Creation
+
+- HTML5
+- CSS3 (including Flexbox, Grid, and simple animations)
+- Google Fonts (Poppins)
+- VS Code
+- Git Bash
+
+---
+
 
