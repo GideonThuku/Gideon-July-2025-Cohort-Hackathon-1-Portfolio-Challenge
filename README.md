@@ -81,9 +81,16 @@ my-portfolio/
 
 ---
 
-## ✆✉ How to Reach Me
+## ✆How to Reach Me
 
 - Email: [gideon@africaability.org](mailto:gideon@africaability.org)
 - LinkedIn: [linkedin.com/in/gideon-thuku-51096580](https://www.linkedin.com/in/gideon-thuku-51096580/)
 
 ---
+
+## Thank You 😊
+
+Thanks for checking out my project.This is just the beginning, I am still learning and growing as a developer.
+
+
+
