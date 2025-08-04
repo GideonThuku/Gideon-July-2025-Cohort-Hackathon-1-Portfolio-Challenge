@@ -1,0 +1,468 @@
+/* Project: Personal Portfolio Website. This CSS file styles a responsive personal portfolio 
+using only HTML and CSS. It includes sections like navigation, hero, skills, 
+education, projects, contact form, and more. Designed for beginners with 
+readable and organized structure.
+*/
+
+/* Root color variables */
+:root {
+  --primary-color: red;
+  --secondary-color: white;
+}
+
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--secondary-color);
+  background-color: #ff7700;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Page Background slideshow */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  animation: bgSlideshow 15s infinite;
+}
+
+/* Background slideshow animation */
+@keyframes bgSlideshow {
+  0%   { background-image: url('assets/images/art1.jpg'); }
+  33%  { background-image: url('assets/images/art3.jpg'); }
+  66%  { background-image: url('assets/images/art6.jpg'); }
+  100% { background-image: url('assets/images/art1.jpg'); }
+}
+
+/* Hide the checkbox used to toggle the menu */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger for mobile menu */
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  display: none;
+  padding: 10px 20px;
+  position: absolute;
+  top: 10px; right: 0;
+  z-index: 11;
+}
+
+/* Navigation bar styles */
+nav {
+  background: var(--primary-color);
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+/* Navigation links container */
+.main-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+/* Navigation links */
+.main-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 10px;
+  transition: all 0.3s ease;
+}
+
+/* Links hover effect */
+.main-links li a:hover {
+  background: white;
+  color: red;
+  border-radius: 4px;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+
+  .main-links {
+    display: none;
+    flex-direction: column;
+    background: red;
+    width: 100%;
+    position: absolute;
+    top: 60px; left: 0;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #menu-toggle:checked + .hamburger + .main-links {
+    display: flex;
+  }
+
+  .main-links li {
+    padding: 10px 0;
+    border-top: 1px solid white;
+  }
+
+  .hero { padding-top: 100px; }
+
+  .split-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .split-section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+/* Hero section with profile image & introduction */
+.hero {
+  padding-top: 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Profile image container */
+.hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Circular profile image with hover effect */
+.profile-hover {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-hover:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 25px red, 0 0 30px white, 0 0 15px rgba(255,255,255,0.4);
+}
+
+/* Abiut Hero tagline */
+.tagline {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+/* Hire Me section */
+.hire-button {
+  margin-top: 20px;
+}
+
+.hire-button a {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hire-button a::before {
+  content: "";
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.hire-button a:hover::before {
+  transform: scaleX(1);
+}
+
+.hire-button a:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+/* Section container styles */
+section {
+  width: 100%;
+  padding: 80px 20px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: overlay;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+}
+
+/* Section titles */
+section h2 {
+  text-align: center;
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  display: inline-block;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Centered content */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Project card  */
+.card-section {
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Grid layout cards */
+.card-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* One card box */
+.card {
+  background: rgba(255,255,255,0.1);
+  border-left: 5px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.card h3 {
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+ul li, p {
+  margin-bottom: 10px;
+}
+
+/* Education */
+#education ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#education .container {
+  text-align: center;
+}
+
+.edu-item {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 5px solid var(--primary-color);
+  border-radius: 6px;
+}
+
+/* Skills progress bars */
+.skills .bar {
+  background: #333;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.skills .level {
+  padding: 0 10px;
+  height: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Skill bar colors for languages */
+.skills .container .bar:nth-child(2) .level { background-color: #4cd02b; } /* HTML */
+.skills .container .bar:nth-child(3) .level { background-color: #e426e1; } /* CSS */
+.skills .container .bar:nth-child(4) .level { background-color: #36f211; } /* Python */
+.skills .container .bar:nth-child(5) .level { background-color: #070ff1; } /* MySQL */
+
+/* Contact me form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+input {
+  background: white;
+  color: black;
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#signup a {
+  color: white;
+}
+
+/* Split content with image */
+.split-section {
+  display: flex;
+  gap: 20px;
+}
+
+.split-section img {
+  width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  transition: transform 0.3s ease;
+}
+
+.split-section img:hover {
+  transform: scale(1.05);
+}
+
+.split-section.interests img {
+  max-height: 350px;
+}
+
+.split-text {
+  flex: 1;
+}
+
+/* Experience photos */
+.experience-img-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.vertical-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.experience-profile {
+  width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px red, 0 0 15px white;
+}
+
+/* Timeline layout */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid red;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Timeline icon circle */
+.timeline-icon {
+  position: absolute;
+  top: 0; left: -22px;
+  width: 30px; height: 30px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+}
+
+/* Timeline content box */
+.timeline-content {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-left: 5px solid white;
+  border-radius: 10px;
+}
+
+/* Remove bullets from list */
+.no-bullets {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.no-bullets li {
+  margin-bottom: 6px;
+}
